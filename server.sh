@@ -1,3 +1,5 @@
+#! /bin/bash
+
 alias startgulp="git clone git@github.com:aslamdoctor/gulp-boilerplate.git ./dev"
 alias startapache="sudo service apache2 start"
 alias stopapache="sudo service apache2 stop"

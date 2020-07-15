@@ -1,3 +1,13 @@
+# Installation Steps
+mkdir ~/scripts
+cd ~/scripts
+git clone git@github.com:aslamdoctor/shell-scripts.git
+nano ~/.zshrc
+source ~/scripts/apache.sh
+source ~/scripts/mysql.sh
+source ~/scripts/nginx.sh
+source ~/scripts/mongodb.sh
+
 # Apache
 `startapache` - To start apache server
 
