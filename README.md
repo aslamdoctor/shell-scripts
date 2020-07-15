@@ -1,4 +1,5 @@
 # Installation Steps
+```
 mkdir ~/scripts
 cd ~/scripts
 git clone git@github.com:aslamdoctor/shell-scripts.git
@@ -7,6 +8,7 @@ source ~/scripts/apache.sh
 source ~/scripts/mysql.sh
 source ~/scripts/nginx.sh
 source ~/scripts/mongodb.sh
+```
 
 # Apache
 `startapache` - To start apache server
