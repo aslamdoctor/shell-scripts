@@ -8,6 +8,7 @@ source ~/scripts/apache.sh
 source ~/scripts/mysql.sh
 source ~/scripts/nginx.sh
 source ~/scripts/mongodb.sh
+source ~/.zshrc
 ```
 
 # Apache
