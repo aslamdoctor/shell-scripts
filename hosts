@@ -1,0 +1,3 @@
+# add this into windows hosts file
+127.0.0.1 boilerplate.local
+::1 boilerplate.local
