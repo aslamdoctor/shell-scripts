@@ -4,10 +4,19 @@ mkdir ~/scripts
 cd ~/scripts
 git clone git@github.com:aslamdoctor/shell-scripts.git
 nano ~/.zshrc
+```
+
+Add below code inside the .zshrc file and save it
+```
 source ~/scripts/apache.sh
 source ~/scripts/mysql.sh
 source ~/scripts/nginx.sh
 source ~/scripts/mongodb.sh
+source ~/scripts/common.sh
+```
+
+And finally run below command to update shell
+```
 source ~/.zshrc
 ```
 
