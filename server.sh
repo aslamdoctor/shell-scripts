@@ -10,6 +10,7 @@ newapachehost(){
         sudo cp /etc/apache2/sites-available/boilerplate.local.conf /etc/apache2/sites-available/$1.local.conf
         sudo ln -s  /etc/apache2/sites-available/$1.local.conf
         sudo nano /etc/apache2/sites-available/$1.local.conf
+        rm ~/$1.local.conf
 }
 
 # MySQL
