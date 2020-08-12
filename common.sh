@@ -5,6 +5,7 @@ alias startgulp="git clone git@github.com:aslamdoctor/gulp-boilerplate.git ./dev
 alias foldersize="sudo du -sh ./"
 alias dirstat="ncdu"
 
+
 killport () {
    sudo fuser -n tcp -k $1
    echo "Stopped port : $1"
@@ -27,4 +28,8 @@ zipalldir(){
 gitaddcommit(){
    git add .
    git commit -m "$1"
+}
+
+mkv2mp4(){
+   ffmpeg -i $1 -codec copy $2
 }
