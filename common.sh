@@ -1,10 +1,22 @@
 #!/bin/sh
 
-alias startboilerplate="git clone git@github.com:aslamdoctor/boilerplate.git"
-alias startgulp="git clone git@github.com:aslamdoctor/gulp-boilerplate.git ./dev"
 alias foldersize="sudo du -sh ./"
 alias dirstat="ncdu"
 
+
+newboilerplate(){
+   git clone git@github.com:aslamdoctor/boilerplate.git ./$1
+   code ./$1
+   exit
+}
+
+newgulp(){
+   mkdir ./$1
+   cd ./$1
+   git clone git@github.com:aslamdoctor/gulp-boilerplate.git ./dev
+   code ./
+   exit
+}
 
 killport () {
    sudo fuser -n tcp -k $1
@@ -13,9 +25,9 @@ killport () {
 }
 
 codeblvnk (){
-   cd ~/www/blvnk_new
-   code ./client
-   code ./server
+   code ~/www/blvnk_new/client
+   code ~/www/blvnk_new/server
+   exit
 }
 
 zipalldir(){
@@ -25,9 +37,15 @@ zipalldir(){
    done
 }
 
-gitaddcommit(){
+gitac(){
    git add .
    git commit -m "$1"
+}
+
+gitacp(){
+   git add .
+   git commit -m "$1"
+   git push $2
 }
 
 mkv2mp4(){

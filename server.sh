@@ -7,10 +7,10 @@ alias restartapache="sudo service apache2 restart"
 alias reloadapache="sudo service apache2 reload"
 
 newapachehost(){
-        sudo cp /etc/apache2/sites-available/boilerplate.local.conf /etc/apache2/sites-available/$1.local.conf
-        sudo ln -s  /etc/apache2/sites-available/$1.local.conf
-        sudo nano /etc/apache2/sites-available/$1.local.conf
-        rm ~/$1.local.conf
+   sudo cp ~/shell-scripts/boilerplate.local.conf /etc/apache2/sites-available/$1.local.conf
+   sudo sed -i "s/boilerplate/$1/g" /etc/apache2/sites-available/$1.local.conf
+   sudo a2ensite $1.local.conf && sudo service apache2 reload
+   sudo -- sh -c "echo 127.0.0.1    $1.local >> /etc/hosts"
 }
 
 # MySQL
@@ -23,6 +23,7 @@ backupmysqldb(){
 }
 
 restoremysqldb(){
+   mysql -u admin -padmin -e "CREATE DATABASE IF NOT EXISTS $1"
    mysql -u admin -padmin $1 < ./database.sql
 }
 
