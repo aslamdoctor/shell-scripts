@@ -18,15 +18,14 @@ newgulp(){
    exit
 }
 
-killport () {
+killport() {
    sudo fuser -n tcp -k $1
    echo "Stopped port : $1"
    return 10
 }
 
-codeblvnk (){
-   code ~/www/blvnk_new/client
-   code ~/www/blvnk_new/server
+codeblvnk(){
+   code ~/www/blvnk_new/server && code ~/www/blvnk_new/client
    exit
 }
 
