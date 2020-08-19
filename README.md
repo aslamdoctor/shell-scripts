@@ -25,7 +25,7 @@ source ~/.zshrc
 
 `reloadapache` - To reload apache server
 
-`newapachehost hostname` - To create new host on apache server and add it to hosts file aswell. e.g. `newapachehost mywebsite` will make "mywebsite.local" url available and will create a folder called "mywebsite" inside ~/www folder.
+`newapachehost hostname` - To create new host on apache server and add it to hosts file aswell. e.g. `newapachehost mywebsite` will make "mywebsite.local" url available and will create a folder called "mywebsite" inside ~/www folder. Make sure you don't delete "boilerplate.local.conf" in this repo.
 
 # MySQL
 `startmysql` - To start mysql server
