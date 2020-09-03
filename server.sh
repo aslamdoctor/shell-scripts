@@ -27,6 +27,9 @@ restoremysqldb(){
    mysql -u admin -padmin $1 < ./database.sql
 }
 
+alias startlamp="sudo service mysql start | sudo service apache2 start"
+alias stoplamp="sudo service mysql stop | sudo service apache2 stop"
+
 # MongoDB
 alias startmongodb="sudo service mongodb start"
 alias stopmongodb="sudo service mongodb stop"
