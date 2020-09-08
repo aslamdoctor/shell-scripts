@@ -2,7 +2,8 @@
 
 alias foldersize="sudo du -sh ./"
 alias dirstat="ncdu"
-
+alias vpnup="nmcli con up $1"
+alias vpndown="nmcli con down $1"
 
 newboilerplate(){
    git clone git@github.com:aslamdoctor/boilerplate.git ./$1
