@@ -11,6 +11,15 @@ Add below code inside the .bashrc or .zshrc file and save it
 ```
 source ~/shell-scripts/common.sh
 source ~/shell-scripts/server.sh
+source ~/shell-scripts/wordpress.sh
+```
+
+If you are using Arch based Linux then add below code instead of above:
+
+```
+source ~/shell-scripts/common.sh
+source ~/shell-scripts/server_arch.sh
+source ~/shell-scripts/wordpress_arch.sh
 ```
 
 And finally run below command to update shell
