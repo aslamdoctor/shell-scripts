@@ -34,6 +34,9 @@ wpbp() {
 	echo "Host created at http://$1.local"
 	echo "==> created host files 👍"
 	
+	# delete .git repo folder as it is not needed on entire wordpress project
+	sudo rm -r .git
+	
 	# open project in editor
 	code .
 	echo "==> Finish: All done 👍"
