@@ -51,3 +51,14 @@ gitacp(){
 mkv2mp4(){
    ffmpeg -i $1 -codec copy $2
 }
+
+moveallimages(){
+	find ./ -name '*.jpg' -exec mv -if '{}' ./ \;
+	find ./ -name '*.png' -exec mv -if '{}' ./ \;
+	find ./ -name '*.svg' -exec mv -if '{}' ./ \;
+	find ./ -name '*.gif' -exec mv -if '{}' ./ \;
+}
+
+
+
+
