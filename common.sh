@@ -12,8 +12,8 @@ newboilerplate(){
 }
 
 newgulp(){
-   mkdir ./$1
-   cd ./$1
+#   mkdir ./$1
+#   cd ./$1
    git clone git@github.com:aslamdoctor/gulp-boilerplate.git ./dev
    code ./
    exit
